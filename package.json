@@ -1,0 +1,19 @@
+{
+  "name": "book_shop",
+  "version": "1.1.0",
+  "description": "A place where you can find every books you are looking for",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "book"
+  ],
+  "author": "Cicada3301",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "sweetalert2": "^11.4.37"
+  }
+}
