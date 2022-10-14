@@ -17,7 +17,35 @@ body {
     border-bottom: 3px solid #f00;
     border-radius: 20px;
     margin: 20px;
-    height: 450px;
+    height: 400px;
+}
+.navbar {
+    direction: rtl;
+    padding: 25px 30px;
+}
+.navbar nav a {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    margin: 0 0 0 10px;
+    padding: 0 10px;
+    transition: border 0.3s ease-in-out;
+    cursor: pointer;
+}
+.navbar nav a:not(:last-child) {
+    border-radius: 15px;
+}
+.navbar nav a:not(:last-child):hover {
+    border: 2px solid #fff;
+}
+.navbar nav a:last-child {
+    float: left;
+    word-spacing: 10px;
+}
+.navbar nav a:last-child:hover {
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
 }
 .box {
     margin: 100px 20px;
