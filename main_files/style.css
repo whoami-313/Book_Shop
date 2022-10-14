@@ -1,6 +1,6 @@
 @font-face {
     font-family: "yekan";
-    src: url(./Fonts/Yekan.ttf) format("truetype");
+    src: url(../fonts/Yekan.ttf) format("truetype");
 }
 body {
     padding: 0;
@@ -9,54 +9,15 @@ body {
     font-family: yekan;
 }
 .header {
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
     border-top: 4px solid #f00;
     border-bottom: 3px solid #f00;
     border-radius: 20px;
     margin: 20px;
-    background-color: #00000090;
     height: 450px;
-}
-.header img {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    opacity: 60%;
-    z-index: 0;
-}
-.navbar {
-    position: absolute;
-    padding: 30px 40px;
-    margin: -100px 0;
-    padding: 0;
-    z-index: 1;
-}
-.navbar a:not(:last-child) {
-    position: absolute;
-    right: 300px;
-    color: #fff;
-    text-decoration: none;
-    margin: 0 0 0 10px;
-    padding: 0 10px;
-    font-size: 25px;
-    transition: border 0.3s ease-in-out;
-    border: 2px solid transparent;
-    border-radius: 15px;
-    cursor: pointer;
-    direction: rtl;
-}
-.navbar a:hover {
-    border: 2px solid #fff;
-}
-.navbar a:last-child {
-    text-decoration: none;
-    color: #fff;
-    font-size: 25px;
-    word-spacing: 10px;
-    border: 2px solid transparent;
-    padding: 0 10px;
 }
 .box {
     margin: 100px 20px;
