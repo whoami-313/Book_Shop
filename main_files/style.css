@@ -5,7 +5,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #3f007f;
+    background-color: #151535;
     font-family: yekan;
 }
 .header {
@@ -13,8 +13,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
-    border-top: 4px solid #f00;
-    border-bottom: 3px solid #f00;
+    border-top: 7px solid #DD2C00;
+    border-bottom: 7px solid #DD2C00;
     border-radius: 20px;
     margin: 20px;
     height: 400px;
@@ -23,7 +23,7 @@ body {
     direction: rtl;
     padding: 25px 30px;
 }
-.navbar nav a {
+.navbar nav a:not(.menu a) {
     color: #fff;
     font-size: 25px;
     text-decoration: none;
@@ -32,24 +32,113 @@ body {
     padding: 0 10px;
     transition: border 0.3s ease-in-out;
     cursor: pointer;
+    text-align: center;
 }
-.navbar nav a:not(:last-child) {
+.navbar nav a:not(:last-child, .menu a) {
     border-radius: 15px;
 }
-.navbar nav a:not(:last-child):hover {
+.navbar nav a:not(:last-child, .menu a):hover {
     border: 2px solid #fff;
 }
-.navbar nav a:last-child {
+.navbar nav a:last-child:not(.menu a) {
     float: left;
     word-spacing: 10px;
 }
-.navbar nav a:last-child:hover {
+.navbar nav a:last-child:not(.menu a):hover {
     border-left: 2px solid #fff;
     border-right: 2px solid #fff;
 }
+#shopcart {
+    position: absolute;
+    padding: 0 10px 0 35px;
+    margin: -2px 0;
+}
+.circle {
+    display: inline-block;
+    position: absolute;
+    top: 13px;
+    right: 105px;
+    border: 1px solid #aaa;
+    border-radius: 100%;
+    height: 13px;
+    width: 13px;
+    cursor: pointer;
+    animation: flasher 0.5s ease-in-out infinite alternate;
+}
+@keyframes flasher {
+    0% {
+        background-color: #0f0;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+.products {
+    position: relative;
+    display: inline-block;
+}
+.menubox {
+    position: absolute;
+    top: 40px;
+    right: -50px;
+    border-radius: 15px;
+    padding: 5px 0 0;
+    display: none;
+}
+.menu {
+    background-color: #aaa;
+    border: transparent;
+    outline: transparent;
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: 165px;
+}
+.top {
+    display: block;
+    font-size: 20px!important;
+    border-right: 3px solid #ED1B36!important;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #000;
+    margin: 0 0 15px;
+}
+.menu a:not(.top) {
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: 0 0 7px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+.menu a:not(.top):hover {
+    background-color: #ED1B36;
+    border: 2px solid #ED1B36;
+    color: #fff;
+}
+.products:hover .menubox {
+    animation: list 0.3s ease-in-out;
+    display: block;
+}
+@keyframes list {
+    0% {
+        display: none;
+        opacity: 0;
+        right: -100px;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+        right: -50px;
+    }
+}
 .box {
     margin: 100px 20px;
-    border: 3px solid #fff;
+    border: 10px solid #FFC107;
     border-radius: 20px;
     padding: 30px;
 }
@@ -60,9 +149,9 @@ body {
     display: inline-block;
     width: 250px;
     height: 500px;
-    padding: 55px;
+    padding: 50px;
     margin: 20px;
-    border: 3px solid #ff0;
+    border: 5px solid #E65100;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -81,34 +170,22 @@ body {
 .shoplink {
     text-align: center;
     margin: 50px 0;
-    transition: all 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .shoplink a {
     text-decoration: none;
-    color: #fff;
     font-size: 20px;
-    background-color: #ED1B36;
+    color: #eee;
+    background-color: #DD1120;
     padding: 3px 30px;
     border: transparent;
     border-radius: 20px 4px;
+    transition: 0.3s ease-in-out;
+}
+.shoplink a:hover {
+    color: #fff;
+    background-color: #ED1B36;
 }
 .shoplink:hover {
     transform: scale(1.13);
-}
-.circle {
-    float: right;
-    border: 1px solid #ccc;
-    border-radius: 100%;
-    height: 13px;
-    width: 13px;
-    margin: 15px -10px;
-    animation: flasher 1s ease-in-out infinite alternate;
-}
-@keyframes flasher {
-    0% {
-        background-color: #f00;
-    }
-    100% {
-        background-color: transparent;
-    }
 }
