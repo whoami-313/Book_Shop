@@ -63,7 +63,7 @@ body {
     height: 13px;
     width: 13px;
     cursor: pointer;
-    animation: flasher 0.5s ease-in-out infinite alternate;
+    animation: flasher 0.7s ease-in-out infinite alternate;
 }
 @keyframes flasher {
     0% {
@@ -71,7 +71,7 @@ body {
     }
 
     100% {
-        background-color: transparent;
+        background-color: #f00;
     }
 }
 .products {
